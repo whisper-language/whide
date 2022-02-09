@@ -4,6 +4,7 @@
         width:1**;
         height:1**;
         background-color:#ccc;
+        overflow: scroll;
     }
     .title {
         display:block;
