@@ -1,0 +1,43 @@
+@set tab{
+    :root {
+        display:block;
+        width:1**;
+        height: 1**;
+    }
+    .title {
+        display:block;
+        border-bottom:1px solid grey;
+        
+    }
+    .select {
+        background-color:#ccc;
+    }
+    content {
+        display:block;
+        grow:1;
+    }
+    li.item {
+        padding: 2px 10px;
+        cursor: pointer;
+        border-right:1px solid grey;
+    }
+}
+
+@set tabitem{
+    :root {
+        display:block;
+        width:1**;
+        padding: 0px 5px;
+        text-align:left;
+    }
+    .title {
+        display:block;
+    }
+    content {
+        display:block;
+    }
+    li.item {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}

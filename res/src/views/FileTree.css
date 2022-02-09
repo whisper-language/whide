@@ -1,0 +1,16 @@
+@set FileTree{
+    :root {
+        display:block;
+        width:1**;
+    }
+    .title {
+        display:block;
+    }
+    content {
+        display:block;
+    }
+    li.item {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}

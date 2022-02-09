@@ -1,0 +1,20 @@
+@set menu{
+    :root {
+        display:block;
+        width:1**;
+        margin: 0px;
+        padding:5px;
+        background-color:#ccc;
+    }
+    li.item {
+        padding: 2px 2px;
+        cursor: pointer;
+    }
+}
+
+@set menuitem{
+    :root {
+        display:block;
+        width:1**;
+    }
+}
