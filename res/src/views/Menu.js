@@ -11,6 +11,9 @@ export class Menu extends Element
                 <MenuItem name="文件"></MenuItem>
                 <MenuItem name="编辑"></MenuItem>
                 <MenuItem name="视图"></MenuItem>
+                <MenuItem name="项目"></MenuItem>
+                <MenuItem name="构建"></MenuItem>
+                <MenuItem name="帮助"></MenuItem>
             </MenuBar>
   }
 }

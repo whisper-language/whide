@@ -1,0 +1,13 @@
+@set CodeEditor{
+    :root {
+        padding: 2px;
+        border: none;
+    }
+    plaintext {
+        overflow: scroll-indicator;
+        font-family: monospace;
+        font-size: 10pt;
+        color: black;
+    }
+
+}

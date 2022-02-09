@@ -2,6 +2,8 @@
     :root {
         display:block;
         width:1**;
+        height:1**;
+        background-color:#ccc;
     }
     .title {
         display:block;
@@ -12,5 +14,17 @@
     li.item {
         padding: 5px 10px;
         cursor: pointer;
+    }
+    .directory,.file {
+        padding:  2px;
+    }
+    .directory:hover,.file:hover {
+        cursor: pointer;
+        background-color:#ddd;
+    }
+    .folder {
+        border-left:1px solid gray;
+        margin-left:5px;
+        padding-left:5px;
     }
 }

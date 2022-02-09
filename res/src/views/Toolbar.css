@@ -1,0 +1,15 @@
+@set Toolbar{
+    :root {
+        display:block;
+        padding:5px 0px ;
+        padding-left:2px;
+        background-color:#ddd;
+    }
+    .item {
+        padding: 5px;
+        cursor: pointer;
+    }
+    .item:hover{
+        background-color:red;
+    }
+}
