@@ -1,12 +1,17 @@
 @set Toolbar{
     :root {
-        display:block;
+        flex:horizontal;
         padding:5px 0px ;
         padding-left:2px;
         background-color:#ddd;
+        align-items:center;
     }
+
     .item {
-        padding: 5px;
+        margin-left:5px;
+        margin-right:5px;
+        margin-top:*;
+        margin-bottom:*;
         cursor: pointer;
     }
     .item:hover{

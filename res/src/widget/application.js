@@ -47,7 +47,12 @@ export class Application extends Element {
                 unfold:false,
                 isDir:true,
                 name:"doc",
-                folder:[]
+                folder:[
+                    {
+                        isDir:false,
+                        name:"doc.md"
+                    },
+                ]
             },
             {
                 isDir:false,
@@ -59,16 +64,7 @@ export class Application extends Element {
             },
             {
                 isDir:false,
-                name:"test.txt"
-            },
-            
-            {
-                isDir:false,
-                name:"test.txt"
-            },
-            {
-                isDir:false,
-                name:"test.txt"
+                name:"test1.txt"
             },
         ]
     };
@@ -77,7 +73,7 @@ export class Application extends Element {
             <top>
                 <div.flex.horizontal>
                     <Menu></Menu>
-                    <caption.grow role="window-caption">Whide-IDE</caption>
+                    <caption.grow role="window-caption">Whide-IDE 2022-01-17</caption>
                     <Menu2.shark.grow ctx={this.ctx}></Menu2>
                 </div>
                 <Toolbar></Toolbar>

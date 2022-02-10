@@ -3,7 +3,6 @@
 export class Menu extends Element {
 
   this(props,kids) {
-  
   }
 
   render() {

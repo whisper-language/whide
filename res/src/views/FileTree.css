@@ -21,7 +21,7 @@
     }
     .directory:hover,.file:hover {
         cursor: pointer;
-        background-color:#ddd;
+        background-color:#ccc;
     }
     .folder {
         margin-left:5px;
