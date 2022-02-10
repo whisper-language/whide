@@ -1,20 +1,14 @@
-@set menu{
+@set menu2{
     :root {
         display:block;
-
         margin: 0px;
         padding:5px;
         background-color:#ccc;
+        height:1**;
     }
-    li.item {
+    .fas {
         padding: 2px 2px;
         cursor: pointer;
-    }
-}
-
-@set menuitem{
-    :root {
-        display:block;
-        width:1**;
+        color:#777;
     }
 }

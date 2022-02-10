@@ -9,8 +9,6 @@ html{
 .text_center {
     text-align: center;
 }
-
-
 .main {
     display:flex;
 }
@@ -20,8 +18,23 @@ html{
 .horizontal{
   flow:horizontal;
 }
+caption{
+    height:1**;
+    width:1**;
+    padding:5px;
+    padding-left:40px;
+    padding-top:7px;
+    background-color:#ccc;
+    color:#777;
+}
 .grow {
      grow: 0;
+}
+.grow1 {
+     grow: 1;
+}
+.shark{
+    shark:0;
 }
 .flex {
   display:flex;   
@@ -40,7 +53,6 @@ top {
 }
 bottom {
     height:200px;
-    border-top:1px solid grey;
     display:block;
 }
 bottom>div{
@@ -48,12 +60,10 @@ bottom>div{
 }
 left{
     width:200px;
-    border-right:1px solid grey;
     height:1**;
 }
 right{
     width:200px;
-    border-left:1px solid grey;
     height:1**;
 }
 center {
@@ -61,6 +71,9 @@ center {
     flex-grow: 0;
     display:flex;
 }
+
+splitter { border:none; background:#ddd;}
+
 
 statusbar{
     display:block;

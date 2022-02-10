@@ -3,8 +3,8 @@
         display:block;
         width:1**;
         height:1**;
-        background-color:#ccc;
-        overflow: scroll;
+        background-color:#ddd;
+        overflow: auto;
     }
     .title {
         display:block;
@@ -24,8 +24,21 @@
         background-color:#ddd;
     }
     .folder {
-        border-left:1px solid gray;
         margin-left:5px;
         padding-left:5px;
+    }
+    .file {
+        margin-left:16px;
+    }
+    .fa-file  ,.fa-folder {
+        width:10px;
+        padding: 0px 5px;
+    }
+    .fa-angle-right,.fa-angle-down {
+        width:10px;
+        padding: 0px 2px;
+    }
+    .fas {
+        color:#777;
     }
 }

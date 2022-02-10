@@ -25,7 +25,7 @@ export class FileTree extends Element {
     render(){
         return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.this.rootpath}>
                     {this.roottree.map((fileitem,i)=>
-                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<div.file path={this.rootpath+"/"+fileitem.name}>{fileitem.name}</div>
+                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<div.file path={this.rootpath+"/"+fileitem.name}><i.fas.fa-file></i>{fileitem.name}</div>
                     )}
             </filetree>
     }
