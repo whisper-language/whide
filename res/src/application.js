@@ -1,12 +1,13 @@
-import {Tab} from "../component/tab/tab.js";
-import { TabItem } from "../component/tab/tabItem.js";
-import { FileTree } from "../views/FileTree.js";
-import { Menu } from "../views/Menu.js";
-import { Menu2 } from "../views/Menu2.js";
-import { Toolbar } from "../views/Toolbar.js";
-import { CodeEditor } from "../views/CodeEditor.js";
-import ev from "../utils/eventbus.js";
-import { Statebar } from "../views/Statebar.js";
+import {Tab} from "./component/tab/tab.js";
+import { TabItem } from "./component/tab/tabItem.js";
+import { FileTree } from "./views/FileTree.js";
+import { Menu } from "./views/Menu.js";
+import { Menu2 } from "./views/Menu2.js";
+import { Toolbar } from "./views/Toolbar.js";
+import { CodeEditor } from "./views/codeEditor/CodeEditor.js";
+import ev from "./utils/eventbus.js";
+import { Statebar } from "./views/Statebar.js";
+import { Search } from "./views/search/Search.js";
 
 export class Application extends Element {
     ctx={
@@ -73,6 +74,7 @@ export class Application extends Element {
             <top>
                 <div.flex.horizontal>
                     <Menu></Menu>
+                    <Search  ctx={this.ctx}></Search>
                     <caption.grow role="window-caption">Whide-IDE 2022-01-17</caption>
                     <Menu2.shark.grow ctx={this.ctx}></Menu2>
                 </div>
