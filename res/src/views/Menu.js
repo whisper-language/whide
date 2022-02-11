@@ -5,6 +5,15 @@ export class Menu extends Element {
   this(props,kids) {
   }
 
+  ["on click at .command"](evt,i) {
+      var widget= i.getAttribute("widget")
+      var wnd = new Window({ 
+        url   : __DIR__ + "../widget/"+widget+"/"+widget+".htm", 
+        state : Window.WINDOW_SHOWN,
+        alignment: 5,
+    });
+  }
+
   render() {
       return <ul styleset={__DIR__ + "Menu.css#menu-bar"}>
           <li>文件
@@ -24,14 +33,18 @@ export class Menu extends Element {
           </li>
           <li>视图
             <menu>
-                <li.command name="edit-copy">文件浏览器</li>
-                <li.command name="edit-paste">工具栏</li>
-                <li.command name="edit-paste">状态栏</li>
+                <li.command name="view-file">文件浏览器</li>
+                <li.command name="view-toolbar">工具栏</li>
+                <li.command name="view-statebar">状态栏</li>
             </menu>
           </li>
-          <li>工具
+          <li>设置
             <menu>
-                <li.command name="edit-copy">设置</li>
+                <li.command name="setting-keymapping" widget="filemapping">文件映射...</li>
+                <li.command name="setting-keymapping" widget="keymapping">按键映射...</li>
+                <li.command name="setting-plugin"     widget="plugin">插件...</li>
+                <li.command name="setting-theme"      widget="theme">主题...</li>
+                <li.command name="setting-toolbar"      widget="toolbar">工具栏...</li>
             </menu>
           </li>
           <li>帮助
