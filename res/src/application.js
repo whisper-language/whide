@@ -56,6 +56,61 @@ export class Application extends Element {
                 ]
             },
             {
+                unfold:false,
+                isDir:true,
+                name:"case",
+                folder:[
+                    {
+                        isDir:false,
+                        name:"main.c"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.js"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.cpp"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.php"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.java"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.py"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.r"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.go"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.html"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.css"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.sh"
+                    },
+                    {
+                        isDir:false,
+                        name:"main.bat"
+                    },
+                ]
+            },
+            {
                 isDir:false,
                 name:"readme.txt"
             },

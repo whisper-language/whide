@@ -4,6 +4,6 @@
         padding:3px;
         height:1**;
         background-color:#ccc;
-        overflow: auto;
+        overflow: hidden;
     }
 }

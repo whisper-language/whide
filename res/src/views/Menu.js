@@ -8,9 +8,9 @@ export class Menu extends Element {
   ["on click at .command"](evt,i) {
       var widget= i.getAttribute("widget")
       var wnd = new Window({ 
+        type:Window.DIALOG_WINDOW,
         url   : __DIR__ + "../widget/"+widget+"/"+widget+".htm", 
         state : Window.WINDOW_SHOWN,
-        alignment: 5,
     });
   }
 
@@ -44,7 +44,7 @@ export class Menu extends Element {
                 <li.command name="setting-keymapping" widget="keymapping">按键映射...</li>
                 <li.command name="setting-plugin"     widget="plugin">插件...</li>
                 <li.command name="setting-theme"      widget="theme">主题...</li>
-                <li.command name="setting-toolbar"      widget="toolbar">工具栏...</li>
+                <li.command name="setting-toolbar"    widget="toolbar">工具栏...</li>
             </menu>
           </li>
           <li>帮助
