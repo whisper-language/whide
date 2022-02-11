@@ -8,6 +8,7 @@ import { CodeEditor } from "./views/codeEditor/CodeEditor.js";
 import ev from "./utils/eventbus.js";
 import { Statebar } from "./views/Statebar.js";
 import { Search } from "./views/search/Search.js";
+import { Theme } from "./views/theme/theme.js";
 
 export class Application extends Element {
     ctx={
@@ -124,6 +125,7 @@ export class Application extends Element {
             },
         ]
     };
+
     render(){
        return  <workspace>
             <top>
@@ -131,6 +133,7 @@ export class Application extends Element {
                     <Menu></Menu>
                     <Search  ctx={this.ctx}></Search>
                     <caption.grow role="window-caption">Whide-IDE 2022-01-17</caption>
+                    {/* <Theme ctx={this.ctx}></Theme> */}
                     <Menu2.shark.grow ctx={this.ctx}></Menu2>
                 </div>
                 <Toolbar></Toolbar>
@@ -149,7 +152,7 @@ export class Application extends Element {
             <splitter/>
             <center.grow.editor>
                 <Tab>
-                    <TabItem title="file1.txt">
+                    <TabItem title="main.py">
                         <CodeEditor ctx={this.ctx} ></CodeEditor>
                     </TabItem>
                 </Tab>

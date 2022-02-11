@@ -40,7 +40,8 @@ export class Menu extends Element {
           </li>
           <li>设置
             <menu>
-                <li.command name="setting-keymapping" widget="filemapping">文件映射...</li>
+              <li.command name="setting-editor" widget="editor">编辑器...</li>
+                <li.command name="setting-filemapping" widget="filemapping">文件映射...</li>
                 <li.command name="setting-keymapping" widget="keymapping">按键映射...</li>
                 <li.command name="setting-plugin"     widget="plugin">插件...</li>
                 <li.command name="setting-theme"      widget="theme">主题...</li>

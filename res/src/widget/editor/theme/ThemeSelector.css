@@ -1,0 +1,8 @@
+@set ThemeSelector{
+    :root {
+        margin:0;
+        height:1**;
+        background-color:#ccc;
+        overflow: hidden;
+    }
+}
