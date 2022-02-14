@@ -11,21 +11,22 @@ export class CodeEditor extends Element {
         this.ctx=props.ctx;
     }
 
-    render(props,kids){
+    render(){
         console.log("读取"+this.ctx.path)
-
-
-        
         sys.fs.open(this.ctx.path, "r+", 0o666).then(f=>{
-            
-            //读取文件状态
-           f.read(100).then(c=>{
-                console.log("读取到内容")
-                console.log( c)
-                var encodedString = String.fromCharCode.apply(null, c),
-                decodedString = decodeURIComponent(escape(encodedString));
-                console.log("结果"+decodedString);
-           })
+            console.log("读取文件状态")
+            f.stat().then(s=>{
+                console.log("文件状态")
+                console.log(s.st_size);
+                  //读取文件状态
+                f.read(100).then(c=>{
+                        console.log("读取到内容")
+                        console.log( c)
+                        var encodedString = String.fromCharCode.apply(null, c),
+                        decodedString = decodeURIComponent(escape(encodedString));
+                        console.log("结果"+decodedString);
+                })
+            })
         })
 
         return  <codeEditor.flex.horizontal styleset={__DIR__ + "CodeEditor.css#CodeEditor"}>

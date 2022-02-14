@@ -14,7 +14,7 @@ import { EditorView } from "./views/EditorView.js";
 export class Application extends Element {
     ctx={
         ev,
-        rootpath:"C:\\Users\\Admin\\source\\repos\\WhIde\\res\\workspace",
+        rootpath:"D:\\whide\\res\\workspace",
         roottree:[
             {
                 isDir:true,
@@ -149,7 +149,7 @@ export class Application extends Element {
                         <TabItem title="目录">
                         <FileTree ctx={this.ctx}></FileTree>
                         </TabItem>,
-                        <TabItem title="版本">版本控制</TabItem>
+                        // <TabItem title="版本">版本控制</TabItem>
                        ]
                    }
                 </Tab>

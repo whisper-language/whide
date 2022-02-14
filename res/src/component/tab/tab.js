@@ -11,10 +11,12 @@ export class Tab extends Element
     }
     //渲染
     render() {
-        console.log("所有子节点");
-        console.log(this.kids);
+        // console.log("所有子节点");
+        // console.log(this.kids);
         var items=this.kids[0].map((tabitem,i) =>
-            this.select==i?<li.item.select data={i} >{tabitem[1].title}</li>:<li.item data={i} >{tabitem[1].title}</li>
+            this.select==i?<li.item.select data={i} >{tabitem[1].title}
+            <i.fas.fa-window-close></i></li>:<li.item data={i} >{tabitem[1].title}
+            <i.fas.fa-window-close></i></li>
         );
         var content=this.kids[0][this.select];
         return  <tab styleset={__DIR__ + "tab.css#tab"}>
