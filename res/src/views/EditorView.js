@@ -15,7 +15,8 @@ export class EditorView extends Element {
         this.ctx.ev.on("editorview","editor",(payload)=>{
             // 判断是否存在
             if(this.pathhash.get(payload)){
-                console.log("设置为活动状态")
+                // console.debug("设置为活动状态")
+                this.ctx.ev.fire("editorview","notice","设置为活动状态")
                 return
            }else{
                this.pathhash.set(payload,true);
