@@ -6,8 +6,8 @@ export class Menu extends Element {
   }
 
   ["on click at .command"](evt,i) {
-      var widget= i.getAttribute("widget")
-      var wnd = new Window({ 
+    var widget= i.getAttribute("widget")
+    var wnd = new Window({ 
         type:Window.DIALOG_WINDOW,
         url   : __DIR__ + "../widget/"+widget+"/"+widget+".htm", 
         state : Window.WINDOW_SHOWN,

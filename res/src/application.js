@@ -9,11 +9,12 @@ import ev from "./utils/eventbus.js";
 import { Statebar } from "./views/Statebar.js";
 import { Search } from "./views/search/Search.js";
 import { Theme } from "./views/theme/theme.js";
+import { EditorView } from "./views/EditorView.js";
 
 export class Application extends Element {
     ctx={
         ev,
-        rootpath:"c://test",
+        rootpath:"C:\\Users\\Admin\\source\\repos\\WhIde\\res\\workspace",
         roottree:[
             {
                 isDir:true,
@@ -132,7 +133,7 @@ export class Application extends Element {
                 <div.flex.horizontal>
                     <Menu></Menu>
                     <Search  ctx={this.ctx}></Search>
-                    <caption.grow role="window-caption">Whide-IDE 2022-01-17</caption>
+                    <caption.grow role="window-caption">Whide-IDE 2022-01-17 -  {this.ctx.rootpath}</caption>
                     {/* <Theme ctx={this.ctx}></Theme> */}
                     <Menu2.shark.grow ctx={this.ctx}></Menu2>
                 </div>
@@ -143,20 +144,19 @@ export class Application extends Element {
             <frameset cols="1*,4*">
             <left.grow>
                 <Tab>
-                    <TabItem title="目录">
+                   {
+                       [
+                        <TabItem title="目录">
                         <FileTree ctx={this.ctx}></FileTree>
-                    </TabItem>
-                    {/* <TabItem title="版本">版本控制</TabItem> */}
+                        </TabItem>,
+                        <TabItem title="版本">版本控制</TabItem>
+                       ]
+                   }
                 </Tab>
             </left>
             <splitter/>
             <center.grow.editor>
-                <Tab>
-                    <TabItem title="main.py">
-                        <CodeEditor ctx={this.ctx} ></CodeEditor>
-                    </TabItem>
-                </Tab>
-            
+                <EditorView ctx={this.ctx} />
             </center>
             <splitter/>
             {/* <right>
@@ -170,8 +170,12 @@ export class Application extends Element {
             <splitter/>
             <bottom.flex.vertical>
                     <Tab.grow>
-                        <TabItem title="日志">日志</TabItem>
-                        <TabItem title="控制台">控制台</TabItem>
+                       {
+                           [
+                            <TabItem title="日志">日志</TabItem>,
+                            <TabItem title="控制台">控制台</TabItem>
+                           ]
+                       }
                     </Tab>
                     <Statebar ctx={this.ctx}></Statebar>
             </bottom>

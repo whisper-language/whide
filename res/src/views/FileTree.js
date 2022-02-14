@@ -1,6 +1,8 @@
 import { Directory } from "../component/directory/Directory";
 
 
+import refreshFolder from "../utils/fileutils";
+
 export class FileTree extends Element {
     
     rootpath=""
@@ -8,24 +10,29 @@ export class FileTree extends Element {
     roottree=[]
     
     ctx
+
     this(props,kids){
         this.ctx=props.ctx;
         this.rootpath=props.ctx.rootpath;
-        this.roottree=props.ctx.roottree;
+        // this.roottree=props.ctx.roottree;
+        refreshFolder(this.rootpath,this.roottree);
     }
-
-    ["on click at .file"](evt,item) { 
+   
+    ["on click at .file"](evt,item) {
         this.ctx.ev.fire("filetree","notice","文件:"+item.getAttribute("path"))
+
+        this.ctx.ev.fire("filetree","editor",item.getAttribute("path"))
+        return true;
     }
 
     ["on click at .directory"](evt,item) { 
         this.ctx.ev.fire("filetree","notice","文件夹:"+item.getAttribute("path"))
     }
-
+    
     render(){
         return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.this.rootpath}>
                     {this.roottree.map((fileitem,i)=>
-                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<div.file path={this.rootpath+"/"+fileitem.name}><i.fas.fa-file></i>{fileitem.name}</div>
+                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<div.file path={this.rootpath+"\\"+fileitem.name}><i.fas.fa-file></i>{fileitem.name}</div>
                     )}
             </filetree>
     }
