@@ -68,8 +68,11 @@ right{
 }
 center {
     height:1**;
-    flex-grow: 0;
+ 
     display:flex;
+}
+.content {
+    background:#fff;
 }
 
 splitter { border:none; background:#ddd;}

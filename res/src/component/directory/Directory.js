@@ -24,6 +24,8 @@ export class Directory extends Element {
             <li widget="file" >新建文件</li>
             <li widget="folder" >新建文件夹</li>
             <li widget="rename" >重命名</li>
+            <hr></hr>
+            <li widget="delete" >删除</li>
           </menu>);
         return true;
     }
@@ -32,6 +34,8 @@ export class Directory extends Element {
             <li widget="file" >新建文件...</li>
             <li widget="folder" >新建文件夹</li>
             <li widget="rename" >重命名</li>
+            <hr></hr>
+            <li widget="delete" >删除</li>
           </menu>);
         return true;
      }

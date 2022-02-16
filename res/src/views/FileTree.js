@@ -2,6 +2,7 @@ import { Directory } from "../component/directory/Directory";
 
 
 import refreshFolder from "../utils/fileutils";
+import * as sys from "@sys";
 
 export class FileTree extends Element {
     
@@ -19,8 +20,13 @@ export class FileTree extends Element {
     }
    
     ["on click at .file"](evt,item) {
-        this.ctx.ev.fire("filetree","notice","文件:"+item.getAttribute("path"))
+        let filepath=item.getAttribute("path");
+        let stat=sys.fs.$stat(filepath);
+        this.ctx.ev.fire("filetree","notice","文件:"+item.getAttribute("path")+" 文件大小:"+stat.st_size)
+        return true;
+    }
 
+    ["on doubleclick at .file"](evt,item) {
         this.ctx.ev.fire("filetree","editor",item.getAttribute("path"))
         return true;
     }

@@ -155,16 +155,25 @@ export class Application extends Element {
                 </Tab>
             </left>
             <splitter/>
-            <center.grow.editor>
+            <center.grow.content>
+                <frameset cols="4*,1*">
                 <EditorView ctx={this.ctx} />
+
+                <splitter/>
+                <right>
+                    <Tab>
+                        {
+                            [
+                                <TabItem title="属性">属性</TabItem>,
+                                <TabItem title="事件">事件</TabItem>
+                            ]
+                        }
+                    </Tab>
+                </right>
+                </frameset> 
             </center>
-            <splitter/>
-            {/* <right>
-                <Tab>
-                    <TabItem title="属性">内容1</TabItem>
-                    <TabItem title="事件">内容2</TabItem>
-                </Tab>
-            </right> */}
+            
+          
             </frameset> 
             </center>
             <splitter/>
