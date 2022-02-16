@@ -21,7 +21,7 @@
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.171",
     "jest": "^27.0.4",
-    "node-sass": "^6.0.0",
+    "node-sass": "^7.0.0",
     "postcss": "^8.4.5",
     "rollup": "^2.44.0",
     "rollup-plugin-copy": "^3.4.0",
