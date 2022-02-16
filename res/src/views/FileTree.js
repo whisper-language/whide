@@ -18,6 +18,7 @@ export class FileTree extends Element {
         this.ctx.ev.on("filetree","workspace_init",(ctx)=>{
             this.rootpath=ctx.rootpath;
             console.log("初始化")
+            this.roottree=[];
             refreshFolder(this.rootpath,this.roottree);
             this.patch(this.render());
         })

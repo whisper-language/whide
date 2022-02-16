@@ -140,7 +140,7 @@ export class Application extends Element {
        return  <workspace>
             <top>
                 <div.flex.horizontal>
-                    <Menu></Menu>
+                    <Menu ctx={this.ctx}></Menu>
                     <Search  ctx={this.ctx}></Search>
                     <caption.grow role="window-caption">Whide-IDE 2022-01-17 -  {this.ctx.rootpath}</caption>
                     {/* <Theme ctx={this.ctx}></Theme> */}

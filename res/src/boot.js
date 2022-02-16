@@ -17,6 +17,25 @@ export class Boot {
             })
         })
 
+        this.ctx.ev.on("boot","workspace_new",(payload)=>{
+            //新建工作目录
+            var selectFolder=Window.this.selectFolder({
+                caption:"新建项目目录"
+            });
+            console.log("打开目录"+selectFolder.split("//")[1]); 
+            this.ctx.rootpath=selectFolder.split("//")[1];
+            this.ctx.ev.fire("golbal","workspace_persistence", this.ctx.rootpath)
+            this.ctx.ev.fire("boot","workspace_init",this.ctx)
+        })
+
+        this.ctx.ev.on("boot","workspace_change",(payload)=>{
+            //切换工作沐浴露
+            this.ctx.rootpath=payload;
+            this.ctx.ev.fire("golbal","workspace_persistence", this.ctx.rootpath)
+            this.ctx.ev.fire("boot","workspace_init",this.ctx)
+        })
+
+
         this.initworkspace();
     }
     initworkspace() {

@@ -1,17 +1,26 @@
 
 
 export class Menu extends Element {
-
+  ctx;
   this(props,kids) {
+    this.ctx=props.ctx;
   }
 
   ["on click at .command"](evt,i) {
-    var widget= i.getAttribute("widget")
-    var wnd = new Window({ 
-        type:Window.DIALOG_WINDOW,
-        url   : __DIR__ + "../widget/"+widget+"/"+widget+".htm", 
-        state : Window.WINDOW_SHOWN,
-    });
+    var action= i.getAttribute("action")
+    if(action=="widget"){
+      var widget= i.getAttribute("widget")
+      var wnd = new Window({ 
+          type:Window.DIALOG_WINDOW,
+          url   : __DIR__ + "../widget/"+widget+"/"+widget+".htm", 
+          state : Window.WINDOW_SHOWN,
+      });
+    }
+    if(action=="msg"){
+      let msg=i.getAttribute("msg")
+      let payload=i.getAttribute("payload");
+      this.ctx.ev.fire("menu",msg, payload)
+    }
   }
 
   render() {
@@ -22,6 +31,11 @@ export class Menu extends Element {
                 <li.command name="open-file">打开 …<span class="accesskey">Ctrl+O</span></li>
                 <li.command name="save-file">保存 <span class="accesskey">Ctrl+S</span></li>
                 <li.command name="save-file-as">另存为 …<span class="accesskey">Ctrl+ALT+S</span></li>
+                <li.command name="new-project"  action="msg" msg="workspace_new" payload="new_project">新建项目</li>
+                <li name="switch-project">切换项目<menu>
+                <li.command action="msg" msg="workspace_change" payload="C:\Users\Admin\source\repos\WhIde\res\workspace">C:\Users\Admin\source\repos\WhIde\res\workspace</li>
+                  </menu>
+                </li>
               </menu>
           </li>
           <li>编辑
@@ -41,11 +55,11 @@ export class Menu extends Element {
           <li>设置
             <menu>
               <li.command name="setting-editor" widget="editor">编辑器...</li>
-                <li.command name="setting-filemapping" widget="filemapping">文件映射...</li>
-                <li.command name="setting-keymapping" widget="keymapping">按键映射...</li>
-                <li.command name="setting-plugin"     widget="plugin">插件...</li>
-                <li.command name="setting-theme"      widget="theme">主题...</li>
-                <li.command name="setting-toolbar"    widget="toolbar">工具栏...</li>
+                <li.command name="setting-filemapping" action="widget" widget="filemapping">文件映射...</li>
+                <li.command name="setting-keymapping"  action="widget"  widget="keymapping">按键映射...</li>
+                <li.command name="setting-plugin"   action="widget"   widget="plugin">插件...</li>
+                <li.command name="setting-theme"     action="widget"  widget="theme">主题...</li>
+                <li.command name="setting-toolbar"    action="widget"  widget="toolbar">工具栏...</li>
             </menu>
           </li>
           <li>帮助
