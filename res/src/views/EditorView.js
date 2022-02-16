@@ -40,6 +40,7 @@ export class EditorView extends Element {
     }
 
     render(){
+        console.log("渲染===============")
         var s=this.openlist.map((s,i)=><TabItem title={s.title}><CodeEditor ctx={s} /></TabItem>);
         return  <editorView styleset={__DIR__ + "EditorView.css#EditorView"} >
                     <Tab active={this.activetab} canClose={true} closeHandler={(idx)=>this.closeHandler(idx)}>{s}</Tab>

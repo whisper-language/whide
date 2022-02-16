@@ -149,7 +149,7 @@ export class Application extends Element {
                         <TabItem title="目录">
                         <FileTree ctx={this.ctx}></FileTree>
                         </TabItem>,
-                        <TabItem title="版本">版本控制</TabItem>
+                        // <TabItem title="版本">版本控制</TabItem>
                        ]
                    }
                 </Tab>
