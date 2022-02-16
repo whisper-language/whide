@@ -14,9 +14,13 @@ export class FileTree extends Element {
 
     this(props,kids){
         this.ctx=props.ctx;
-        this.rootpath=props.ctx.rootpath;
-        // this.roottree=props.ctx.roottree;
-        refreshFolder(this.rootpath,this.roottree);
+        
+        this.ctx.ev.on("filetree","workspace_init",(ctx)=>{
+            this.rootpath=ctx.rootpath;
+            console.log("初始化")
+            refreshFolder(this.rootpath,this.roottree);
+            this.patch(this.render());
+        })
     }
    
     ["on click at .file"](evt,item) {

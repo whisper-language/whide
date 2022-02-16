@@ -10,6 +10,8 @@ import { Statebar } from "./views/Statebar.js";
 import { Search } from "./views/search/Search.js";
 import { Theme } from "./views/theme/theme.js";
 import { EditorView } from "./views/EditorView.js";
+import { Boot } from "./boot.js";
+
 
 export class Application extends Element {
     ctx={
@@ -126,6 +128,13 @@ export class Application extends Element {
             },
         ]
     };
+    boot;
+    this(props,kids){
+        console.log('初始化')
+        this.boot=new Boot();
+        this.boot.init(this.ctx);
+    }
+
 
     render(){
        return  <workspace>
