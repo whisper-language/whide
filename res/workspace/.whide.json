@@ -9,6 +9,7 @@
         "bin",
         "doc"
     ],
+    "hiddenExtension":true,
     "plugin":[
     ]
 }

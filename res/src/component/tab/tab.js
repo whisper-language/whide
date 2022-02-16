@@ -7,7 +7,9 @@ export class Tab extends Element
     closeHandler=(idx)=>{};
 
     kids;
-    
+    //缓存呀  减少渲染
+    stores=new Map();
+
     this(props,kids) {
         this.kids=kids;
         this.select=props.active||0;

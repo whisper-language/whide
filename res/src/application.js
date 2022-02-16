@@ -126,6 +126,8 @@ export class Application extends Element {
                 name:"test1.txt"
             },
         ],
+        openList:[
+        ],
         localConfig:{
 
         }

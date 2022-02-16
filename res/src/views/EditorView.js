@@ -11,6 +11,7 @@ export class EditorView extends Element {
     
     this(props,kids){
         this.ctx=props.ctx;
+        this.openlist=props.ctx?.openlist||[];
         this.ctx.ev.on("editorview","editor",(payload)=>{
             if(this.openfilemap.get(payload)){
                 this.ctx.ev.fire("editorview","notice","切换到文件"+payload)
@@ -40,10 +41,9 @@ export class EditorView extends Element {
     }
 
     render(){
-        console.log("渲染===============")
         var s=this.openlist.map((s,i)=><TabItem title={s.title}><CodeEditor ctx={s} /></TabItem>);
         return  <editorView styleset={__DIR__ + "EditorView.css#EditorView"} >
-                    <Tab active={this.activetab} canClose={true} closeHandler={(idx)=>this.closeHandler(idx)}>{s}</Tab>
+                <Tab active={this.activetab} canClose={true} closeHandler={(idx)=>this.closeHandler(idx)}>{s}</Tab>
             </editorView>;
     }
 }
