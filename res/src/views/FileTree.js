@@ -16,6 +16,7 @@ export class FileTree extends Element {
         this.ctx=props.ctx;
         
         this.ctx.ev.on("filetree","workspace_init",(ctx)=>{
+            //TODO 加载项目级别的配置文件
             this.rootpath=ctx.rootpath;
             console.log("初始化")
             this.roottree=[];

@@ -2,6 +2,7 @@
 
 export class Menu extends Element {
   ctx;
+
   this(props,kids) {
     this.ctx=props.ctx;
   }
@@ -31,11 +32,7 @@ export class Menu extends Element {
                 <li.command name="open-file">打开 …<span class="accesskey">Ctrl+O</span></li>
                 <li.command name="save-file">保存 <span class="accesskey">Ctrl+S</span></li>
                 <li.command name="save-file-as">另存为 …<span class="accesskey">Ctrl+ALT+S</span></li>
-                <li.command name="new-project"  action="msg" msg="workspace_new" payload="new_project">新建项目</li>
-                <li name="switch-project">切换项目<menu>
-                <li.command action="msg" msg="workspace_change" payload="C:\Users\Admin\source\repos\WhIde\res\workspace">C:\Users\Admin\source\repos\WhIde\res\workspace</li>
-                  </menu>
-                </li>
+                <li.command name="new-project"  action="msg" msg="workspace_new" payload="new_project">切换项目</li>
               </menu>
           </li>
           <li>编辑

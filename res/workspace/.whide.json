@@ -1,0 +1,14 @@
+{
+    "version":"0.0.1",
+    "idx":"./readme.md",
+    "hiddenFilesReg":[
+        "*.tmp",
+        ".*"
+    ],
+    "excludeIdx":[
+        "bin",
+        "doc"
+    ],
+    "plugin":[
+    ]
+}

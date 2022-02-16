@@ -12,11 +12,10 @@ import { Theme } from "./views/theme/theme.js";
 import { EditorView } from "./views/EditorView.js";
 import { Boot } from "./boot.js";
 
-
 export class Application extends Element {
     ctx={
         ev,
-        rootpath:"C:\\Users\\Admin\\source\\repos\\WhIde\\res\\workspace",
+        rootpath:"",
         roottree:[
             {
                 isDir:true,
@@ -126,7 +125,10 @@ export class Application extends Element {
                 isDir:false,
                 name:"test1.txt"
             },
-        ]
+        ],
+        localConfig:{
+
+        }
     };
     boot;
     this(props,kids){
