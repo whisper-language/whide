@@ -24,6 +24,10 @@
     background-image: url(./assets/font/line/chevron-circle-right-solid.svg) ;
 }
 
+.fi-close {
+    background-image: url(./assets/font/line/times-circle.svg) ;
+}
+
 
 .fi-win-close {
     background-image: url(./assets/font/line/window-close.svg) ;

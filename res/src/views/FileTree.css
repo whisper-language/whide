@@ -18,7 +18,7 @@
     }
     .directory,.file {
         line-height:1.5em;
-        padding:  2px;
+        padding:  4px;
         font-size:1.2em;
     }
     .directory:hover,.file:hover {
@@ -32,6 +32,12 @@
     .file {
         margin-left:16px;
     }
+    
+    .file .fi,.file .name {
+        margin-top:*;
+        margin-bottom:*;
+    }
+
     .fa-file  ,.fa-folder {
         width:16px;
         

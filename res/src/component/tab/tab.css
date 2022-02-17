@@ -22,14 +22,30 @@
         grow:1;
         height: 1**;
     }
-    li.item {
+    span.item {
         padding: 2px 10px;
+        height:20px;
         cursor: pointer;
+        line-height:8px;
         border-right:1px solid grey;
+       
+    }
+    .cell{
+        line-height:8px;
+        margin-top:*; 
+        margin-bottom:*; 
+    }
+    .name {
+        white-space:nowrap;
+        line-height:8px;
+        margin-top:*; 
+        margin-bottom:*; 
     }
     closeHandler {
-        padding-left:5px;
         color:#999;
+        margin-top:*; 
+        margin-bottom:*; 
+        margin-left:10px;
     }
 }
 

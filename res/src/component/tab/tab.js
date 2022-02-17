@@ -21,15 +21,15 @@ export class Tab extends Element
        return this.closeHandler(item.getAttribute("idx"));
     }
 
-    ["on click at li.item"](evt,item) { 
+    ["on click at span.item"](evt,item) { 
         this.componentUpdate({ select:item.getAttribute("data") });
     }
     //渲染
     render(props,kids) {
         this.select=props?.active||this.select;
         var items=this.kids[0].map((tabitem,i) =>{
-            let h=<div>{tabitem[1].title}{this.canClose?<closeHandler.fi.fi-window-close idx={i}></closeHandler>:<></>}</div>;
-            return this.select==i?<li.item.select data={i} >{h}</li>:<li.item data={i} >{h}</li>
+            let h=<div.cell.flex.horizontal><span.name>{tabitem[1].title}</span>{this.canClose?<closeHandler.fi.fi-close idx={i}></closeHandler>:<></>}</div>;
+            return this.select==i?<span.item.flex.horizontal.select data={i} >{h}</span>:<span.item.flex.horizontal data={i} >{h}</span>
             });
         var content=this.kids[0][this.select];
         return  <tab styleset={__DIR__ + "tab.css#tab"}>

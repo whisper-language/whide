@@ -3,6 +3,7 @@ import { Directory } from "../component/directory/Directory";
 
 import refreshFolder from "../utils/fileutils";
 import * as sys from "@sys";
+import { File } from "../component/file/File";
 
 export class FileTree extends Element {
     
@@ -42,9 +43,9 @@ export class FileTree extends Element {
     }
     
     render(){
-        return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.this.rootpath}>
+        return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.rootpath}>
                     {this.roottree.map((fileitem,i)=>
-                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<div.file path={this.rootpath+"\\"+fileitem.name}><i.fi.fi-file></i>{fileitem.name}</div>
+                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<File data={fileitem} path={this.rootpath+"\\"+fileitem.name}></File>
                     )}
             </filetree>
     }
