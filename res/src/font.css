@@ -1,0 +1,36 @@
+.fi {
+    background-size: contain;
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    line-height:1.2em;
+    fill:#333;
+    background-repeat: no-repeat;
+}
+
+.fi-file {
+    background-image: url(./assets/font/line/file.svg) ;
+}
+
+.fi-folder {
+    background-image: url(./assets/font/line/folder.svg) ;
+}
+
+.fi-angle-down {
+    background-image: url(./assets/font/line/chevron-circle-down-solid.svg) ;
+}
+
+.fi-angle-right {
+    background-image: url(./assets/font/line/chevron-circle-right-solid.svg) ;
+}
+
+
+.fi-win-close {
+    background-image: url(./assets/font/line/window-close.svg) ;
+}
+.fi-win-max {
+    background-image: url(./assets/font/line/window-maximize.svg) ;
+}
+.fi-win-min {
+    background-image: url(./assets/font/line/window-minimize.svg) ;
+}

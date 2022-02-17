@@ -57,11 +57,11 @@ export class Directory extends Element {
         var sub=this.unfold?<div.folder path={this.props.data.name}>
             {this.props.data.folder.map((fileitem,i) =>
             fileitem.isDir?<Directory data={fileitem} path={this.props.path+"\\"+this.props.data.name} ></Directory>:
-            <div.file path={this.props.path+"\\"+this.props.data.name+"\\"+fileitem.name}><i.fas.fa-file></i>{fileitem.name}</div>
+            <div.file path={this.props.path+"\\"+this.props.data.name+"\\"+fileitem.name}><i.fi.fi-file></i>{fileitem.name}</div>
         )}
         </div>:"";
         return  <div>
-                    <div.directory path={this.props.path+"\\"+this.props.data.name}> {this.unfold?<i.fas.fa-angle-down></i>:<i.fas.fa-angle-right></i>} <i.fas.fa-folder></i>  {this.props.data.name||"root"}</div>
+                    <div.directory path={this.props.path+"\\"+this.props.data.name}> {this.unfold?<i.fi.fi-angle-down></i>:<i.fi.fi-angle-right></i>} <i.fi.fi-folder></i>  {this.props.data.name||"root"}</div>
                      {sub}
                 </div>
         ;

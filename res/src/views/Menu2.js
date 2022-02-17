@@ -27,9 +27,9 @@ export class Menu2 extends Element
 
   render(props,kids) {
     return <div styleset={__DIR__ + "Menu2.css#menu2"}>
-                <minimize.fas.fa-window-minimize role="window-minimize"></minimize>
-                <maximize.fas.fa-window-maximize></maximize>
-                <close.fas.fa-window-close></close>
+                <minimize.fi.fi-win-min role="window-minimize"></minimize>
+                <maximize.fi.fi-win-max></maximize>
+                <close.fi.fi-win-close></close>
             </div>
   }
 }

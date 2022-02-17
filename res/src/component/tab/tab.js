@@ -28,7 +28,7 @@ export class Tab extends Element
     render(props,kids) {
         this.select=props?.active||this.select;
         var items=this.kids[0].map((tabitem,i) =>{
-            let h=<div>{tabitem[1].title}{this.canClose?<closeHandler.fas.fa-window-close idx={i}></closeHandler>:<></>}</div>;
+            let h=<div>{tabitem[1].title}{this.canClose?<closeHandler.fi.fi-window-close idx={i}></closeHandler>:<></>}</div>;
             return this.select==i?<li.item.select data={i} >{h}</li>:<li.item data={i} >{h}</li>
             });
         var content=this.kids[0][this.select];

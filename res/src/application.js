@@ -11,6 +11,7 @@ import { Search } from "./views/search/Search.js";
 import { Theme } from "./views/theme/theme.js";
 import { EditorView } from "./views/EditorView.js";
 import { Boot } from "./boot.js";
+import { Term } from "./views/Term.js";
 
 export class Application extends Element {
     ctx={
@@ -194,8 +195,10 @@ export class Application extends Element {
                     <Tab.grow>
                        {
                            [
+                            <TabItem title="控制台">
+                                <Term></Term>
+                            </TabItem>,
                             <TabItem title="日志">日志</TabItem>,
-                            <TabItem title="控制台">控制台</TabItem>
                            ]
                        }
                     </Tab>
