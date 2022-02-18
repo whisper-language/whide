@@ -17,6 +17,12 @@ export class Boot {
             })
         })
 
+
+        this.ctx.ev.on("boot","open_explorer",(ctx)=>{
+            console.log("在资源管理器打开"+"/root,"+ctx)
+            env.exec("explorer","/root,"+ctx.replaceAll("/","\\"))
+        })
+
         this.ctx.ev.on("boot","workspace_new",(payload)=>{
             //新建工作目录
             var selectFolder=Window.this.selectFolder({

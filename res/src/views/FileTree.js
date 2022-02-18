@@ -42,12 +42,15 @@ export class FileTree extends Element {
 
     ["on click at .directory"](evt,item) { 
         this.ctx.ev.fire("filetree","notice","文件夹:"+item.getAttribute("path"))
+        return true;
     }
-    
+
     render(){
         return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.rootpath}>
                     {this.roottree.map((fileitem,i)=>
-                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath} ctx={this.ctx} ></Directory>:<File data={fileitem} path={this.rootpath+"\\"+fileitem.name}></File>
+                        fileitem.isDir?
+                        <Directory data={fileitem} path={this.rootpath} ctx={this.ctx} ></Directory>:
+                        <File data={fileitem} path={this.rootpath+"\\"+fileitem.name} ctx={this.ctx}></File>
                     )}
             </filetree>
     }
