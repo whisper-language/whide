@@ -12,7 +12,7 @@ import { Theme } from "./views/theme/theme.js";
 import { EditorView } from "./views/EditorView.js";
 import { Boot } from "./boot.js";
 import { Term } from "./views/Term.js";
-
+import FileMapping from "./fileMapping.js"
 export class Application extends Element {
     ctx={
         ev,
@@ -129,6 +129,9 @@ export class Application extends Element {
         ],
         openList:[
         ],
+        file_resolve:{
+            mapping:FileMapping
+        },
         localConfig:{
 
         }

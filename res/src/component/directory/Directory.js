@@ -4,9 +4,11 @@ import { File } from "../file/File";
 export class Directory extends Element {
     props
     unfold
+    ctx
     this(props,kids) {
         this.props=props;
         this.unfold=this.props.data.unfold;
+        this.ctx=this.props.ctx;
     }
     ["on click at li"]( evt, i ) {
         var widget= i.getAttribute("widget")
@@ -44,7 +46,7 @@ export class Directory extends Element {
 
     ["on click at div.directory"]( event, source ) {
         if(this.props.data.folder.length==0){
-            refreshFolder(this.props.path+"\\"+this.props.data.name,this.props.data.folder)
+            refreshFolder(this.props.path+"\\"+this.props.data.name,this.props.data.folder,this.ctx)
             this.componentUpdate({ unfold:!this.unfold ,props:this.props});
         }else{
             this.componentUpdate({ unfold:!this.unfold});

@@ -6,6 +6,8 @@ import * as sys from "@sys";
 import { File } from "../component/file/File";
 
 export class FileTree extends Element {
+
+
     
     rootpath=""
 
@@ -21,7 +23,7 @@ export class FileTree extends Element {
             this.rootpath=ctx.rootpath;
             console.log("初始化")
             this.roottree=[];
-            refreshFolder(this.rootpath,this.roottree);
+            refreshFolder(this.rootpath,this.roottree,this.ctx);
             this.patch(this.render());
         })
     }
@@ -45,7 +47,7 @@ export class FileTree extends Element {
     render(){
         return  <filetree styleset={__DIR__ + "FileTree.css#FileTree"} path={this.rootpath}>
                     {this.roottree.map((fileitem,i)=>
-                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath}></Directory>:<File data={fileitem} path={this.rootpath+"\\"+fileitem.name}></File>
+                        fileitem.isDir?<Directory data={fileitem} path={this.rootpath} ctx={this.ctx} ></Directory>:<File data={fileitem} path={this.rootpath+"\\"+fileitem.name}></File>
                     )}
             </filetree>
     }

@@ -6,7 +6,9 @@ export class File  extends Element {
     }
 
     render(){
-        console.log(this.props.path)
-        return <div.file.flex.horizontal path={this.props.path}><i.fi.fi-file></i><span.name>{this.props.data.name}</span></div>
+        return <div class={"file flex horizontal"} path={this.props.path}>
+                    <i.fi.fi-file style={"background-image: url("+this.props.data?.resolve?.icon||+")"}></i>
+                    <span.name>{this.props.data.name}</span>
+                </div>
     }
 }

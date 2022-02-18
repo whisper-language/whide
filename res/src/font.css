@@ -28,13 +28,18 @@
     background-image: url(./assets/font/line/times-circle.svg) ;
 }
 
-
 .fi-win-close {
     background-image: url(./assets/font/line/window-close.svg) ;
 }
+
 .fi-win-max {
     background-image: url(./assets/font/line/window-maximize.svg) ;
 }
 .fi-win-min {
     background-image: url(./assets/font/line/window-minimize.svg) ;
+}
+
+.file .fi {
+    padding-left: 5px;
+    padding-right: 5px;
 }
