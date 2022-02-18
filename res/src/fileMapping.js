@@ -40,6 +40,9 @@ const fileMapping={
     },
     html:{
         icon:"assets/file/file_type_html.svg"
+    },
+    sql:{
+        icon:"assets/file/file_type_sql.svg"
     }
 };
 
