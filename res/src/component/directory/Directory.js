@@ -40,7 +40,7 @@ export class Directory extends Element {
             <li action="msg" msg="copy_to_clipboard"  payload={this.props.path} >复制绝对路径</li>
             {/* <li action="msg" msg="copy_to_clipboard"  payload={this.props.path} >复制路径</li> */}
             <hr></hr>
-            <li widget="delete" >删除</li>
+            <li action="msg" msg="removefile"  payload={this.props.path} >删除</li>
           </menu>);
         return true;
     } 
