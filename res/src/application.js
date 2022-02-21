@@ -148,7 +148,7 @@ export class Application extends Element {
                 <div.flex.horizontal>
                     <Menu ctx={this.ctx}></Menu>
                     <Search  ctx={this.ctx}></Search>
-                    <caption.grow role="window-caption">Whide-IDE 2022-01-17 -  {this.ctx.rootpath}</caption>
+                    <caption.grow role="window-caption">Whide-IDE 2022-01-17  {this.ctx.rootpath}</caption>
                     {/* <Theme ctx={this.ctx}></Theme> */}
                     <Menu2.shark.grow ctx={this.ctx}></Menu2>
                 </div>
@@ -158,13 +158,15 @@ export class Application extends Element {
             <center.horizontal>
             <frameset cols="1*,4*">
             <left.grow>
-                <Tab>
+                <Tab active={1}>
                    {
                        [
-                        <TabItem title="目录">
-                        <FileTree ctx={this.ctx}></FileTree>
-                        </TabItem>,
-                        <TabItem title="版本">版本控制</TabItem>
+                            <TabItem title="项目" >项目</TabItem>,
+                            <TabItem title="目录">
+                            <FileTree ctx={this.ctx}></FileTree>
+                            </TabItem>,
+                            <TabItem title="版本">版本控制</TabItem>,
+                            <TabItem title="远程">远程</TabItem>,
                        ]
                    }
                 </Tab>
@@ -180,7 +182,9 @@ export class Application extends Element {
                         {
                             [
                                 <TabItem title="属性">属性</TabItem>,
-                                <TabItem title="事件">事件</TabItem>
+                                <TabItem title="事件">事件</TabItem>,
+                                <TabItem title="数据库">数据库</TabItem>,
+                                <TabItem title="代码片段">代码片段</TabItem>,
                             ]
                         }
                     </Tab>

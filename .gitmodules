@@ -7,3 +7,6 @@
 [submodule "component\\grpc"]
 	path = component\\grpc
 	url = git@github.com:grpc/grpc.git
+[submodule "component/scintilla"]
+	path = component/scintilla
+	url = git@github.com:mirror/scintilla.git
