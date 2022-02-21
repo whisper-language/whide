@@ -1,0 +1,6 @@
+[submodule "component/libssh2"]
+	path = component/libssh2
+	url = git@github.com:libssh2/libssh2.git
+[submodule "component/libgit2"]
+	path = component/libgit2
+	url = git@github.com:libgit2/libgit2.git

@@ -41,6 +41,11 @@ export class Boot {
             this.ctx.ev.fire("boot","workspace_init",this.ctx)
         })
 
+        this.ctx.ev.on("boot","copy_to_clipboard",(payload)=>{
+            console.log("复制路径"+payload);
+            Clipboard.writeText(payload.replaceAll("\\","/"));
+        })
+
 
         this.initworkspace();
     }

@@ -35,7 +35,10 @@ export class Directory extends Element {
             <li widget="rename" >重命名</li>
             <hr></hr>
             <li action="msg" msg="open_explorer" payload={this.props.path} >在资源管理器打开</li>
-            <li action="msg" msg="open_term"  payload={this.props.path} >在终端打开</li>
+            {/* <li action="msg" msg="open_term"  payload={this.props.path} >在终端打开</li> */}
+            <hr></hr>
+            <li action="msg" msg="copy_to_clipboard"  payload={this.props.path} >复制绝对路径</li>
+            {/* <li action="msg" msg="copy_to_clipboard"  payload={this.props.path} >复制路径</li> */}
             <hr></hr>
             <li widget="delete" >删除</li>
           </menu>);
