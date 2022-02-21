@@ -1,0 +1,34 @@
+
+<html lang="en">
+<head>
+</head>
+
+<style>
+    editor { behavior: editor1;  
+        display: block;    
+        width: *;         
+        height: 200px;         
+        }
+</style>
+<body>
+    <p.testaccess>111111</p>
+    222
+    <editor></editor>
+    111
+</body>
+
+
+
+
+<script type="module">
+    import {$} from "@sciter";
+    console.log(Window.this.frame.nativeMessage())
+
+    var elEditor = $("editor");
+    console.log(elEditor.name)
+    // for(let x in elEditor){
+    //     console.log(x);
+    // }
+    elEditor.select(1); // calling our native method
+</script>
+</html>
