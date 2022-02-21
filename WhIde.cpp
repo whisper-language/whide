@@ -5,6 +5,10 @@
 #include "sciter-x.h"
 #include "sciter-x-window.hpp"
 #include "sciter-x-behavior.h"
+#include "Scintilla.h"
+#include "SciLexer.h"
+#include "git2.h"
+#include "libssh2.h"
 
 using namespace sciter;
 
@@ -19,7 +23,13 @@ public:
 	SOM_PASSPORT_END
 
 		// function expsed to script:
-	sciter::string  nativeMessage() { 
+	sciter::string  nativeMessage() {
+		git_libgit2_init();
+		git_repository* repo = NULL;
+		int error = git_repository_init(&repo, "E:\\rep", false);
+
+
+
 		dom::element root = dom::element::root_element(get_hwnd());
 		dom::element s = root.find_first(".testaccess");
 		s.set_text(L"Hello world");
